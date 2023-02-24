@@ -1,0 +1,274 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Specifying Color with RGBa, HSLa, Hexadecimal, and CSS Filters</title>
+	<link href="css/normalize.css" rel="stylesheet">
+	<link href="css/base.css" rel="stylesheet">
+	<style>
+/* STEP 1: Using the color picker utility at
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool,
+set each color in hexadecimal format
+to match as closely as you can with the colors
+on the paint swatch card provided.
+-------------------------------------------------- */
+		#hex div:nth-of-type(1) {
+				/* fallback color */
+			    background-color: rgb(57, 57, 175);  
+				/* main color */
+				background-color: #DF66DB;
+		}
+		#hex div:nth-of-type(2) {
+				/* fallback color */
+				background-color: rgb(14, 10, 10);
+				/* main color */
+				background-color: #7d837c;
+		}
+		#hex div:nth-of-type(3) {
+				/* fallback color */
+				background-color: rgb(6, 31, 23);
+				/* main color */
+				background-color:#866c67;
+		}
+		#hex div:nth-of-type(4) {
+				/* fallback color */
+				background-color: rgb(92, 92, 3);
+				/* main color  */
+				background-color:  #867a69 ;
+		}
+		#hex div:nth-of-type(5) {
+				/* fallback color  */
+				background-color: rgb(151, 128, 98);
+				/* main color  */
+				background-color: #6b7576 ;
+		}
+		#hex div:nth-of-type(6) {
+				/* fallback color  */
+				background-color: rgb(2, 58, 58);
+				/* main color */
+				background-color: #8d7a76;
+		}
+/* STEP 2: Set each color in rgba format
+to match as closely as you can with the colors
+on the paint swatch card provided.
+-------------------------------------------------- */
+
+		/* the first is the fallback color and the second is teh main color as rgba */
+
+		#rgba div:nth-of-type(1) {
+				background-color: #6a4108;
+
+				background-color: rgba(132, 53, 56, 1);
+		}
+		#rgba div:nth-of-type(2) {
+				background-color:#114807;
+
+				background-color: rgba(203, 68, 50, 1);
+		}
+		#rgba div:nth-of-type(3) {
+				background-color: #051d01;
+
+				background-color: rgba(222, 112, 51, 1);
+		}
+		#rgba div:nth-of-type(4) {
+				background-color: #061c02;
+
+				background-color: rgba(255, 160, 1, 1);
+		}
+		#rgba div:nth-of-type(5) {
+				background-color: #6a4108;
+
+				background-color: rgba(201, 198, 39, 1);
+		}
+		#rgba div:nth-of-type(6) {
+				background-color: #2d1915;
+
+				background-color: rgba(73, 154, 59, 1);
+		}
+/* STEP 3: Set each color in hsla format
+to match as closely as you can with the colors
+on the paint swatch card provided - but the
+background pattern must be visible.
+-------------------------------------------------- */
+		/* the first color is the fall back color and the second is the main color as hsla */
+
+		#hsla div:nth-of-type(1) {
+				background-color: #a62309;
+
+				background-color: hsla(188, 54%, 22%, 1);
+		}
+		#hsla div:nth-of-type(2) {
+				background-color: #775e59;
+
+				background-color: hsla(209, 57%, 28%,1);
+		}
+		#hsla div:nth-of-type(3) {
+				background-color: #7d551c;
+
+				background-color: hsla(187, 100%, 20%, 1);
+		}
+		#hsla div:nth-of-type(4) {
+				background-color: #0c606a;
+
+				background-color: hsla(242, 18%, 29%, 1);
+		}
+		#hsla div:nth-of-type(5) {
+				background-color: #1e7d0d;
+
+				background-color: hsla(30, 19%, 27%, 1);
+		}
+		#hsla div:nth-of-type(6) {
+				background-color: #000000;
+
+				background-color: hsla(60, 1%, 23%, 1);
+		}
+/* STEP 4: Set each color using a CSS color keywords
+(https://developer.mozilla.org/en-US/docs/Web/CSS/color_value)
+that matches each color as closely as possible, then
+apply one or more CSS filters to see if you can
+produce an exact rendition of the swatch color
+(https://developer.mozilla.org/en-US/docs/Web/CSS/filter).
+-------------------------------------------------- */
+		/* the first color is the fallback color and the second color is the main color which is changed using filter  */
+		#opacity div:nth-of-type(1) {
+				background-color: red;
+
+				background-color: cyan;
+				/* Example below transforms cyan to red… */
+				filter: hue-rotate(180deg) saturate(500%);
+		}
+		#opacity div:nth-of-type(2) {
+				background-color: pink;
+
+				background-color:red;
+				
+				filter: hue-rotate(60deg) saturate(100%);
+		}
+		#opacity div:nth-of-type(3) {
+				background-color: black;
+
+				background-color:aquamarine;
+				
+				filter: hue-rotate(86deg);
+		}
+		#opacity div:nth-of-type(4) {
+				background-color: purple;
+
+				background-color: fuchsia;
+				
+				filter: grayscale(1%);
+		}
+		#opacity div:nth-of-type(5) {
+				background-color: blue;
+
+				background-color: khaki;
+				
+				filter:grayscale(90%);
+		}
+		#opacity div:nth-of-type(6) {
+				background-color: hotpink;
+				
+				filter: invert(50);
+		}
+
+		
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1>Specifying Color <em>with</em> <abbr title="Red, Green, Blue, Alpha">RGBa</abbr>, <abbr title="Hue, Saturation, Luminousity, Alpha">HSLa</abbr>, Hexadecimal, <em>and</em> CSS Filters</h1>
+	</header>
+	<main>
+		<section id="hex">
+			<h2>Hexadecimal</h2>
+			<div>
+				<h3>Springtime Bloo</h3>
+			</div>
+			<div>
+				<h3>Valley Hills</h3>
+			</div>
+			<div>
+				<h3>Bitter Briar</h3>
+			</div>
+			<div>
+				<h3>Mocha Accent</h3>
+			</div>
+			<div>
+				<h3>Hidden Peak</h3>
+			</div>
+			<div>
+				<h3>Warm Embrace</h3>
+			</div>
+		</section>
+		<section id="rgba">
+			<h2>RGB(A)</h2>
+			<div>
+				<h3>Cherry Cobbler</h3>
+			</div>
+			<div>
+				<h3>Red Hot</h3>
+			</div>
+			<div>
+				<h3>Citrus Blast</h3>
+			</div>
+			<div>
+				<h3>Instant Deligh</h3>
+			</div>
+			<div>
+				<h3>Lime Pop</h3>
+			</div>
+			<div>
+				<h3>Green Acres</h3>
+			</div>
+		</section>
+		<section id="hsla">
+			<h2>HSL(A)</h2>
+			<div>
+				<h3>Moonlit Pool</h3>
+			</div>
+			<div>
+				<h3>Blueberry Twis</h3>
+			</div>
+			<div>
+				<h3>Peakcock Tail</h3>
+			</div>
+			<div>
+				<h3>Lunar Eclipse</h3>
+			</div>
+			<div>
+				<h3>Dried Leaf</h3>
+			</div>
+			<div>
+				<h3>Black Suede</h3>
+			</div>
+		</section>
+		<section id="opacity">
+			<h2>Keyword/Filter</h2>
+			<div>
+				<h3>Red</h3>
+			</div>
+			<div>
+				<h3>Brown</h3>
+			</div>
+			<div>
+				<h3>Sky Blue</h3>
+			</div>
+			<div>
+				<h3>Light Purple</h3>
+			</div>
+			<div>
+				<h3>Gray</h3>
+			</div>
+			<div>
+				<h3>Light Green</h3>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<p><small>Colors based on CIL color paint swatch cards</small></p>
+	</footer>
+</body>
+</html>
